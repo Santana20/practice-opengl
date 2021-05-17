@@ -10,11 +10,11 @@ class Object {
 protected:
 	float* vertices;
 	unsigned int* indices;
-	unsigned int  nv;
-	unsigned int  ni;
+	int  nv;
+	int  ni;
 
 public:
-	Object(unsigned int n, unsigned int m)
+	Object(int n, int m)
 			: vertices(new float[n]), indices(new unsigned int[m]), nv(n), ni(m) {}
 
 	float* getVertices() {
@@ -23,10 +23,10 @@ public:
 	unsigned int* getIndices() {
 		return indices;
 	}
-	unsigned int getVSize() {
+	int getVSize() {
 		return nv;
 	}
-	unsigned int getISize() {
+	int getISize() {
 		return ni;
 	}
 };
@@ -77,10 +77,10 @@ public:
 			-wm, -hm, -dm,   f.r, f.g, f.b,   1.0f, 0.0f,  // 22
 			 wm, -hm, -dm,   f.r, f.g, f.b,   0.0f, 0.0f   // 23
 		};
-		for (unsigned int i = 0; i < nv; ++i) {
+		for (int i = 0; i < nv; ++i) {
 			vertices[i] = temp[i];
 		}
-		for (unsigned int i = 0; i < 6; ++i) {
+		for (int i = 0; i < 6; ++i) {
 			indices[i*6 + 0] = i*4 + 0;
 			indices[i*6 + 1] = i*4 + 1;
 			indices[i*6 + 2] = i*4 + 2;

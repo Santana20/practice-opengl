@@ -30,7 +30,7 @@ Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, 
 	path = new Path();
 	// get the path of image
 	std::string filename = path->tp(image);
-
+	std::cout << filename;
 	// Assigns the type of the texture ot the texture object
 	type = texType;
 
