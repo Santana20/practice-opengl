@@ -6,6 +6,7 @@ layout (location = 3) in vec3 aNormal;
 
 out vec3 color;
 out vec2 textCoord;
+
 out vec3 Normal;
 out vec3 crntPos;
 

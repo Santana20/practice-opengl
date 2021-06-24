@@ -1,12 +1,13 @@
 #version 330 core
 
-out vec4 FragColor;
-
 in vec3 color;
 in vec2 textCoord;
 
 in vec3 Normal;
 in vec3 crntPos;
+
+
+out vec4 FragColor;
 
 uniform sampler2D tex0;
 
